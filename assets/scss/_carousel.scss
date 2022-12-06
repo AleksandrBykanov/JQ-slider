@@ -13,7 +13,7 @@ body {
 
 .carousel {
   position: relative;
-  background-color: #333;
+  background-color: $color-dark;
 }
 .slides {
   position: relative;
@@ -88,6 +88,7 @@ body {
     left: 50%;
     height: 0;
     width: 0;
+    color: $color-light;
     transition: opacity 0.25s ease-out;
     opacity: 0;
     font-size: 20vh;
@@ -96,39 +97,41 @@ body {
     &:focus {
       transition: opacity 1s ease-in 0.5s;
       opacity: 1;
-      text-shadow: 0 0 30px rgba(#ffffff, 0.3);
+      text-shadow: 0 0 30px rgba($color-light, 0.5);
     }
   }
 
   &-prev {
     left: 0;
-    width: 10%;
+    width: 5%;
+    color: $color-light;
     @extend %control;
     &:hover,
     &:focus {
-      color: #ffffff;
+      color: $color-light;
       background: linear-gradient(
         to right,
-        rgba(#000000, 0.8),
-        rgba(#000000, 0)
+        rgba($color-light, 0.3),
+        rgba($color-light, 0)
       );
-      text-shadow: 0 0 10px #ffffff;
+      text-shadow: 0 0 10px $color-dark;
     }
   }
 
   &-next {
     right: 0;
-    width: 10%;
+    width: 5%;
+    color: $color-light;
     @extend %control;
     &:hover,
     &:focus {
-      color: #ffffff;
+      color: $color-light;
       background: linear-gradient(
         to left,
-        rgba(#000000, 0.8),
-        rgba(#000000, 0)
+        rgba($color-light, 0.3),
+        rgba($color-light, 0)
       );
-      text-shadow: 0 0 10px #ffffff;
+      text-shadow: 0 0 10px $color-dark;
     }
   }
 }
@@ -147,7 +150,7 @@ body {
   width: 20px;
   height: 20px;
   margin: -40px 7.5px 0;
-  border: 3px solid rgba(#000000, 0.4);
+  border: 3px solid rgba($color-light, 0.4);
   border-radius: 50%;
   outline: none;
   background: none;
@@ -158,7 +161,7 @@ body {
   }
 
   &.active {
-    border-color: aqua;
-    box-shadow: 0 0 10px aqua;
+    border-color: $color-light;
+    box-shadow: 0 0 10px $color-light;
   }
 }
